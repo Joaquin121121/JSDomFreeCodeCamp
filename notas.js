@@ -92,13 +92,57 @@
 // console.log(ul.firstElementChild)
 
 
-/* Sibling Node Traversal*/
+// /* Sibling Node Traversal*/
 
-let ul = document.querySelector("ul")
-const div = document.querySelector("div")
+// let ul = document.querySelector("ul")
+// const div = document.querySelector("div")
 
 
-console.log(div.childNodes)
+// console.log(div.childNodes)
 
-console.log(ul.previousSibling)
-console.log(ul.nextSibling)
+// console.log(ul.previousSibling)
+// console.log(ul.nextSibling)
+
+
+/* Event Listeners */
+
+// element.addEventListener("click", function)
+
+
+// const li = document.querySelector(".list-item-2")
+// const button2 = document.createElement("button")
+// button2.innerText = "Confirmo"
+// li.append(button2)
+
+// const alertBtn = () =>{
+//     alert("Banco una banda")
+// }
+
+// button2.addEventListener("click", alertBtn)
+
+// const div = document.getElementsByClassName('container')
+
+// const changeBackgroundToRed = () =>{
+//     div[0].style.backgroundColor = "red"
+// }
+
+
+// li.addEventListener("mouseover", changeBackgroundToRed)
+
+/* Reveal Element */
+
+const revealBtn = document.querySelector(".reveal-btn")
+const hiddenContent = document.querySelector(".hidden")
+
+const revealContent = () =>{
+    if(hiddenContent.classList.contains("hidden")){
+        hiddenContent.classList.remove("hidden")
+        revealBtn.innerText = "Ocultar"
+    }
+    else{
+        hiddenContent.classList.add("hidden")
+        revealBtn.innerText = "Revelar"
+    }
+}
+
+revealBtn.addEventListener("click", revealContent)

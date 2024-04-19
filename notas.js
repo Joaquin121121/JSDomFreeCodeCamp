@@ -129,20 +129,46 @@
 
 // li.addEventListener("mouseover", changeBackgroundToRed)
 
-/* Reveal Element */
+// /* Reveal Element */
 
-const revealBtn = document.querySelector(".reveal-btn")
-const hiddenContent = document.querySelector(".hidden")
+// const revealBtn = document.querySelector(".reveal-btn")
+// const hiddenContent = document.querySelector(".hidden")
 
-const revealContent = () =>{
-    if(hiddenContent.classList.contains("hidden")){
-        hiddenContent.classList.remove("hidden")
-        revealBtn.innerText = "Ocultar"
-    }
-    else{
-        hiddenContent.classList.add("hidden")
-        revealBtn.innerText = "Revelar"
-    }
-}
+// const revealContent = () =>{
+//     if(hiddenContent.classList.contains("hidden")){
+//         hiddenContent.classList.remove("hidden")
+//         revealBtn.innerText = "Ocultar"
+//     }
+//     else{
+//         hiddenContent.classList.add("hidden")
+//         revealBtn.innerText = "Revelar"
+//     }
+// }
 
-revealBtn.addEventListener("click", revealContent)
+// revealBtn.addEventListener("click", revealContent)
+
+
+// /* Event Propagation */
+
+// window.addEventListener("click", function(){
+//     console.log("window")
+// }, false) /* true para capturing phase, false para bubbling */
+// document.addEventListener("click", function(e){
+//     console.log("Document")
+//     /* e.stopPropagation()  */
+// }, {once: true} /* El listener se elimina despeus de ser ejecutado una vez */)
+// document.querySelector(".div2").addEventListener("click", function(){
+//     console.log("div2")
+// }, false)
+// document.querySelector(".div1").addEventListener("click", function(){
+//     console.log("div1")
+// }, false)
+// document.querySelector(".button").addEventListener("click", function(e){
+//     e.preventDefault()
+//     console.log(e.target.innerText = "Clicked!") /* La e representa el Event Object --> tiene mucha info util. Le puedo poner .propiedad para que muestre esa propiedad */
+// }, false)
+
+
+/* Event Delegation */
+
+/* It allows users to append a single event listener to a parent element that adds it to all of its present and future descendants that match a selector */

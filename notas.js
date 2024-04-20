@@ -172,3 +172,17 @@
 /* Event Delegation */
 
 /* It allows users to append a single event listener to a parent element that adds it to all of its present and future descendants that match a selector */
+
+document.querySelector("#mvps").addEventListener("click", function(e){
+   console.log(e.target.getAttribute("id") + " is clicked") 
+   const target = e.target
+   if (target.matches("li")){
+    target.style.background = "red"
+   }
+})
+
+const mvps = document.querySelector('#mvps')
+const newMvp = document.createElement("li")
+
+newMvp.innerText = "Jayson Tatum"
+mvps.append(newMvp)
